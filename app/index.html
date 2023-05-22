@@ -15,22 +15,12 @@
 		<label for="rows">Rows:</label>
 		<input type="number" id="rows" placeholder="Enter number of rows">
 		
+		<script src="appjs/ratio.js" type="module" ></script>
+		
 		<button onclick="calculateAspectRatio()">Calculate Aspect Ratio</button>
 		
 		<p id="result"></p>
 	  </div>
-	<script type="text/javascript">
-		function calculateAspectRatio() {
-      		var stitches = parseInt(document.getElementById("stitches").value);
-      	var rows = parseInt(document.getElementById("rows").value);
-      
-      	if (isNaN(stitches) || isNaN(rows)) {
-        	document.getElementById("result").innerHTML = "Please enter valid numbers for stitches and rows.";
-      		} else {
-        		var aspectRatio = stitches / rows;
-        		document.getElementById("result").innerHTML = "Aspect Ratio: " + aspectRatio.toFixed(2);
-      		}
-    }
-	</script>
+	
 </body>
 </html>
